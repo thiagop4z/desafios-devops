@@ -1,4 +1,4 @@
-# Desafio DevOps Idwall :: Thiago Paz #
+# DevOps Challenge Idwall .::. Thiago Paz #
 
 # Variables to allow users input of region and SSH ip range
 # Default values was omitted to force user's input

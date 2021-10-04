@@ -21,6 +21,15 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Utilização de módulos do Terraform
 
 ## Notas
-- Pode se utilizar tanto AWS quanto GCP (Google Cloud), não é preciso executar o teste em ambas, somente uma.
+- Pode se utilizar tanto AWS quanto GCP (Google ffCloud), não é preciso executar o teste em ambas, somente uma.
 - Todos os recursos devem ser criados utilizando os créditos gratuitos da AWS/GCP.
 - Não esquecer de destruir os recursos após criação e testes do desafio para não haver cobranças ou esgotamento dos créditos.
+
+# Resolução
+
+## Comentários
+
+Os objetivos principais e extras foram implementados.
+
+O security group e a instância foram implementados em duas versões, utilizando recursos e módulos do Terraform. As implementações através de recursos estão comentadas (desativadas) e foram mantidas apenas para demonstração.
+

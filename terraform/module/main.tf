@@ -1,4 +1,4 @@
-# DevOps Challenge Idwall :: Thiago Paz #
+# DevOps Challenge Idwall .::. Thiago Paz #
 
 terraform {
   required_providers {
@@ -14,7 +14,8 @@ provider "aws" {
   region = var.aws_region
 }
 
-# Create Security Group to allow port 22, 80, 443
+# Create Security Group to allow connection on ports 22, 80, 443
+/*
 resource "aws_security_group" "idwall-sg" {
   name        = "idwall sg"
   description = "Allow ports 22, 80, 443"
@@ -55,14 +56,33 @@ resource "aws_security_group" "idwall-sg" {
     Name = "idwall security group"
   }
 }
+*/
+
+module "idwall-sg" {
+  source = "terraform-aws-modules/security-group/aws"
+
+  name        = "idwall sg"
+  description = "Allow ports 22, 80, 443"
+
+
+  ingress_cidr_blocks      = ["0.0.0.0/0"]
+  ingress_rules            = ["https-443-tcp", "http-80-tcp"]
+  ingress_with_cidr_blocks = [
+    {
+      rule        = "ssh-tcp"
+      cidr_blocks = "${var.ssh_range}" # ask user for cidr_blocks
+    },
+  ]
+}
+
 
 # Create Ubuntu server, install docker and run httpd container
 # Same resource recreated below using module
 /*
 resource "aws_instance" "idwall-ec2" {
-    ami = "ami-09e67e426f25ce0d7" #Ubuntu Server 20.04
+    ami = "ami-09e67e426f25ce0d7" # Ubuntu Server 20.04
     instance_type = "t2.micro"
-    key_name = "DevOps-Master"
+    key_name = "DevOps-Master" # Key pair
 
     user_data = <<-E0F
                 #!/bin/bash
@@ -85,10 +105,9 @@ module "ec2_instance" {
 
   name = "idwall-ec2"
 
-  ami                    = "ami-09e67e426f25ce0d7"
+  ami                    = "ami-09e67e426f25ce0d7" # Ubuntu Server 20.04
   instance_type          = "t2.micro"
   key_name               = "DevOps-Master" # Key pair
-  monitoring             = true
 
   user_data = <<-E0F
                 #!/bin/bash
