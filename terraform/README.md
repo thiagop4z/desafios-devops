@@ -29,7 +29,7 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 
 ## Comentários
 
-Foram feitas duas implementações da solução, a primeira utilizando módulos e a segunda utilizando recursos do *Terraform*:
+Foram feitas duas implementações da solução, a primeira utilizando módulos e a segunda utilizando recursos do *Terraform*. Todos os objetivos principais e extras foram atendidos.
 
 2. [Solução 1 - Module](https://github.com/thiagop4z/desafios-devops/tree/master/terraform/module)
 
