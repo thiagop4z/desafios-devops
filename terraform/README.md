@@ -25,13 +25,13 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Todos os recursos devem ser criados utilizando os créditos gratuitos da AWS/GCP.
 - Não esquecer de destruir os recursos após criação e testes do desafio para não haver cobranças ou esgotamento dos créditos.
 
-# Resolução
+# Solução
 
 ## Comentários
 
-Foram feitas duas implementações da solução, a primeira utilizando recursos (*resource*) e a segunda utilizando módulos:
+Foram feitas duas implementações da solução, a primeira utilizando recursos e a segunda utilizando módulos do *Terraform*:
 
-1. [Solução 1 - Resource] (https://github.com/thiagop4z/desafios-devops/tree/master/terraform/resource)
+1. [Solução 1 - Resource](https://github.com/thiagop4z/desafios-devops/tree/master/terraform/resource)
 
-2. [Solução 2 - Module] (https://github.com/thiagop4z/desafios-devops/tree/master/terraform/module)
+2. [Solução 2 - Module](https://github.com/thiagop4z/desafios-devops/tree/master/terraform/module)
 
