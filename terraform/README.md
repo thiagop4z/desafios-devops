@@ -21,18 +21,7 @@ Recursos de infraestrutura em nubvem devem sempre ser criados utilizando gerenci
 - Utilização de módulos do Terraform
 
 ## Notas
-- Pode se utilizar tanto AWS quanto GCP (Google ffCloud), não é preciso executar o teste em ambas, somente uma.
+- Pode se utilizar tanto AWS quanto GCP (Google Cloud), não é preciso executar o teste em ambas, somente uma.
 - Todos os recursos devem ser criados utilizando os créditos gratuitos da AWS/GCP.
 - Não esquecer de destruir os recursos após criação e testes do desafio para não haver cobranças ou esgotamento dos créditos.
-
-# Solução
-
-## Comentários
-
-Foram feitas duas implementações da solução, a primeira utilizando módulos e a segunda utilizando recursos do *Terraform*.
-Todos os objetivos principais e extras foram atendidos.
-
-2. [Solução 1 - Module](https://github.com/thiagop4z/desafios-devops/tree/master/terraform/module)
-
-1. [Solução 2 - Resource](https://github.com/thiagop4z/desafios-devops/tree/master/terraform/resource)
 
