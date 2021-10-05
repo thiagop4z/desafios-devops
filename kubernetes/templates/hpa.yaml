@@ -1,3 +1,5 @@
+# DevOps Challenge Idwall .::. Thiago Paz #
+
 {{- if .Values.autoscaling.enabled }}
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
